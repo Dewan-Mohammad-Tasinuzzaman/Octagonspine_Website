@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import { Orbitron } from "next/font/google";
 import "../../styles/main.scss";
 import NavBar from "./NavBar";
 import { Providers } from './Providers';
@@ -12,6 +12,9 @@ import { dir } from 'i18next'
 import { languages } from '../i18n/settings'
 
 
+// FONT
+const inter = Orbitron({ subsets: ['latin'] });
+
 
 // LANGUAGE-CHANGE RELATED
 export async function generateStaticParams() {
@@ -20,19 +23,10 @@ export async function generateStaticParams() {
 
 
 
-// FONTS
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"],
-  variable: '--font-lato',
-});
-
-
-
 // META-TAGS
 export const metadata: Metadata = {
-  title: "Juno Pharma Canada Inc.",
-  description: "Advancing The Healthcare of Canadians",
+  title: "Octagon Spine",
+  description: "3D Printable Titanium Expandable Spinal Cage for Precision Medicine.",
 };
 
 
@@ -50,8 +44,9 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
   const { lng } = params;
 
   return (
-    <html lang={lng} dir={dir(lng)}>
-      <body className={lato.className}>
+    <html lang={lng} dir={dir(lng)} className={inter.className}>
+      <body>
+        <div className="layout__background-color"></div>
         <NavBar params={params} />
         <Providers>
           <SmoothScroll>

@@ -1,10 +1,76 @@
-
+// ANIMATIONS
 
 @keyframes Float_Up_Down {
-    0%, 100% {
-      transform: translateY(-2px);
-    }
-    50% {
-      transform: translateY(2px);
-    }
+  0%, 100% {
+    transform: rotate(-10deg) scaleX(-1) translateY(-6rem);
   }
+  50% {
+    transform: rotate(-10deg) scaleX(-1) translateY(6rem);
+  }
+}
+
+
+@keyframes InfiniteMoveX {
+
+  0% {
+    transform: translateX(0) translateY(-50%);
+  }
+  20% {
+
+  }
+  40% {
+
+  }
+  50% {
+
+  }
+  51% {
+
+  }
+  60% {
+
+  }
+  99.999999999% {
+    transform: translateX(calc(-100% / 3)) translateY(-50%);
+  }
+  100% {
+    transform: translateX(0) translateY(-50%);
+  }
+
+}
+
+
+
+@keyframes KeepRotatingAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@keyframes KeepRotatingReverseAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+
+
+@keyframes OpacityPulseAnimation {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+}

@@ -4,10 +4,12 @@ import Image from "next/image";
 import React, { useRef, useState, useEffect } from 'react';
 import Link from "next/link";
 import styles from "./page.module.scss";
-import { useTranslation } from '../i18n/client';
 import { ParallaxBanner } from "react-scroll-parallax";
+import { useTranslation } from '../i18n/client';
 import External_Link_Icon from "@/public/assets/svgs/external-link_icon.svg";
-
+import Hero_Octagon_Symbol from "@/public/assets/svgs/hero-octagon-symbol.svg";
+import Hero_Octagon_Stroke from "@/public/assets/svgs/hero-octagon.svg";
+import Spine_Illustration from "@/public/assets/images/spine_geometric_illustration-orange.png";
 
 
 // Define the props type for the HomePage component
@@ -23,93 +25,42 @@ export default function Home({ params: { lng } }: HomePageProps) {
   const { t } = useTranslation(lng, 'home-page');
 
   // Images for ParallaxBanner
-  const homeBannerImage = "/assets/images/home-banner-img.PNG";
-
-  // Email Sending
-  const handleEmailButtonClick = () => {
-    window.location.href = 'mailto:' + 'junocare@junopharm.com';
-  };
+  const homeBannerImage = "/assets/images/image.PNG";
 
   // Videos
-  const BlueSmoke_MP4_URL = "/assets/videos/blue_smoke_juno.mp4";
-  const BlueSmoke_WEBM_URL = "/assets/videos/blue_smoke_juno.webm";
-
-  // To Un-render Videos
-  const [screenWidth, setScreenWidth] = useState<number | null>(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
-    // Check if window is defined (client-side) before adding event listener
-    if (typeof window !== 'undefined') {
-      setScreenWidth(window.innerWidth);
-      window.addEventListener('resize', handleResize);
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }
-  }, []);
+  const BlueSmoke_MP4_URL = "/assets/videos/video.mp4";
+  const BlueSmoke_WEBM_URL = "/assets/videos/video.webm";
 
   return (
     <main className={styles.main}>
       
       <section id="section-hero" className="hero">
 
-        {/* Main Contents */}
-        <div className="hero__contents page-span-big">
-
-          <div className="hero__contents_intro">
-            {/* <Image src={Logo_Icon_White} alt="Logo Icon (Heart)" unoptimized={true} className="hero__contents_intro-logoicon" /> */}
-            <h1 className="hero__contents_intro-header">{t('hero-header')}</h1>
-            <p className="hero__contents_intro-description">{t('hero-description')}</p>
-            {/* <div className="hero__contents_intro-keep-scrolling keep-scrolling">
-              <div className="keep-scrolling__text">{t('keep-scrolling')}</div>
-              <Image src={Down_Arrow_White} alt="Down Arrow" unoptimized={true} className="keep-scrolling__icon" />
-            </div> */}
-          </div>
-
-          {/* Links */}
-          <div className="hero__contents_links">
-            <Link href="https://www.junopharm.ca/" target="blank" className="hero__contents_links-link">
-              <Image src={External_Link_Icon} alt="Video Icon" unoptimized={true} className="hero__contents_links-link--icon" />
-              <p className="hero__contents_links-link--text">{t('hero-juno-link')}</p>
-            </Link>
-            <Link href="https://www.omegapharma.ca/" target="blank" className="hero__contents_links-link">
-              <Image src={External_Link_Icon} alt="Video Icon" unoptimized={true} className="hero__contents_links-link--icon" />
-              <p className="hero__contents_links-link--text">{t('hero-omega-link')}</p>
-            </Link>
-          </div>
-
-          {/* <Link href="/noromby-guide#noromby-section-video" className="hero__contents_video-circle">
-            <Image src={Video_Icon_White} alt="Video Icon" unoptimized={true} className="hero__contents_video-circle--icon" />
-          </Link> */}
-
+        {/* Infiinite Text */}
+        <div className="hero__infinite-text">
+        <div className="hero__infinite-text_item hero__infinite-text_dot"></div>
+          <p className="hero__infinite-text_item"><span className="bold">THE WORLD&apos;S 1<sup>ST</sup></span> 3D PRINTABLE TITANIUM EXPANDABLE <span className="bold">SPINAL CAGE</span> FOR PRECISION MEDICINE</p>
+          <div className="hero__infinite-text_item hero__infinite-text_dot"></div>
+          <p className="hero__infinite-text_item"><span className="bold">THE WORLD&apos;S 1<sup>ST</sup></span> 3D PRINTABLE TITANIUM EXPANDABLE <span className="bold">SPINAL CAGE</span> FOR PRECISION MEDICINE</p>
+          <div className="hero__infinite-text_item hero__infinite-text_dot"></div>
+          <p className="hero__infinite-text_item"><span className="bold">THE WORLD&apos;S 1<sup>ST</sup></span> 3D PRINTABLE TITANIUM EXPANDABLE <span className="bold">SPINAL CAGE</span> FOR PRECISION MEDICINE</p>
+          <div className="hero__infinite-text_item hero__infinite-text_dot"></div>
+        </div>
+        
+        <div className="hero__illustration">
+          <Image src={Hero_Octagon_Symbol} alt="Octagon Symbol" unoptimized={true} className="hero__illustration_symbol" />
+          <Image src={Hero_Octagon_Stroke} alt="Octagon Stroke" unoptimized={true} className="hero__illustration_stroke" />
         </div>
 
-        {/* Banner Image */}
-        <ParallaxBanner
-            layers={[
-              {
-                image: homeBannerImage,
-                speed: -70,
-                translateY: [0, 30],
-                opacity: [1, 1],
-                scale: [1.05, 1, 'easeOutCubic'],
-                shouldAlwaysCompleteAnimation: true,
-              },
-            ]}
-            className="w-full aspect-2-1 hero__image"
-        />
-        {screenWidth && screenWidth > 650 && (
-          <video className="hero__video" autoPlay muted loop playsInline preload="true">
-            <source src={BlueSmoke_MP4_URL} type="video/mp4" />
-            <source src={BlueSmoke_WEBM_URL} type="video/webm" />
-            {/* Add more source elements for different formats if necessary */}
-            Your browser does not support the video tag. Time to switch!
-          </video>
-        )}
-        <div className="banner-shadow"></div>
+        {/* Learn More Button */}
+        <Link href={`/${lng}/about`} className={`btn-primary hero__button`}>
+          <div className={`btn-primary__text`}>LEARN MORE</div>
+        </Link>
+
+        {/* Skeleton Illustration */}
+        <Image src={Spine_Illustration} alt="Spine Illustration" unoptimized={true} className="hero__spine-illustration-left" />
+        <Image src={Spine_Illustration} alt="Spine Illustration" unoptimized={true} className="hero__spine-illustration-right" />
+        
       </section>
 
     </main>

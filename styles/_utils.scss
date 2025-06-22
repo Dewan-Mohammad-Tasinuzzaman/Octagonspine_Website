@@ -24,32 +24,32 @@
     margin: 0 20rem;
 
     @include respond(laptop) {
-        margin: 0 12rem;
+
     }
     @include respond(tablet-small-1) {
-        margin: 0 6rem;
+
     }
     @include respond(phone) {
-        margin: 0 4rem;
+
     }
     @include respond(phone-small-1) {
-        margin: 0 3rem;
+
     }
 }
 .page-margins-small {
     margin: 0 16rem;
 
     @include respond(laptop) {
-        margin: 0 10rem;
+
     }
     @include respond(tablet-small-1) {
-        margin: 0 6rem;
+
     }
     @include respond(phone) {
-        margin: 0 4rem;
+
     }
     @include respond(phone-small-1) {
-        margin: 0 3rem;
+
     }
 }
 .marg-right-small {
@@ -64,15 +64,4 @@
 }
 .aspect-2-1 {
     aspect-ratio: 2/1;
-}
-
-
-// Banner Shadows
-.banner-shadow {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(29, 29, 29, 0.3) 0%, rgba(29, 29, 29, 0.822) 100%);
 }

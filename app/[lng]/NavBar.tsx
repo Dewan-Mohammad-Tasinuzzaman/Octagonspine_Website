@@ -6,9 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image';
 import { useTranslation } from '../i18n/client';
 import { languages } from '../i18n/settings';
-import Logo from '@/public/assets/svgs/juno-logo-blue.svg';
-import Medical_Icon_Dark from '@/public/assets/svgs/medical-icon-dark.svg';
-import Contacts_Icon_White from '@/public/assets/svgs/contact-icon-white.svg';
+import Logo_Symbol_White from '@/public/assets/svgs/logo-symbol-white.svg';
 
 
 // Define the props type for the NavBar component
@@ -74,39 +72,39 @@ export default function NavBar({ params: { lng } }: NavBarProps) {
         {/* Logo Box */}
         <Link href={`/${lng}`} onClick={closeMobileMenu}>
           <div className="navbar__logobox">
-            <Image src={Logo} alt="Logo" unoptimized={true} className="navbar__logobox_logo" />
+            <Image src={Logo_Symbol_White} alt="Logo" unoptimized={true} className="navbar__logobox_symbol" />
           </div>
         </Link>
 
-        {/* Options */}
-        <div className={`navbar__interaction-overlay ${showMobileMenu ? '' : 'display-none'}`} onClick={closeMobileMenu}></div>
+        {/* Interaction Layer for closing Mobile-Menu */}
+        {/* <div className={`navbar__interaction-overlay ${showMobileMenu ? '' : 'display-none'}`} onClick={closeMobileMenu}></div> */}
+
+        {/* Main Options */}
         <div className={`navbar__options ${showMobileMenu ? 'show-mobile-menu' : ''}`}>
-          {/* <Link href={`/${lng}`} onClick={closeMobileMenu} className='navbar__options-option marg-right-small'>
-            <div className="navbar__options_link">
-              <div className={`${`/${lng}` === currentPath ? 'active-page-nav' : ''} navbar__options_link-text`}>{t('nav-link01')}</div>
-            </div>
-          </Link> */}
-          <div className="navbar__options-option">
-            {languages.filter((l) => lng !== l).map((l, index) => {
-              return (
-                <div key={l} className='langswitch'>
-                  <p className="langswitch__text">{t('translate')}</p>
-                  <span className='langswitch__btn'>
-                    {index > 0 && (' or ')}
-                    <p className="langswitch__btn_current">{lng}</p>
-                    <Link className='langswitch__btn_link' href={`/${l}`} onClick={closeMobileMenu}>{l}</Link>
-                  </span>
-                </div>
-              )
-            })}
-          </div>
+          <Link href={`/${lng}`} onClick={closeMobileMenu} className='navbar__options_option'>
+              <div className={`${`/${lng}` === currentPath ? 'active-page-nav' : ''} navbar__options_option-text`}>HOME</div>
+              <div className={`${`/${lng}` === currentPath ? 'active-page-underline' : ''} underline`}></div>
+          </Link>
+          <Link href={`/${lng}/about`} onClick={closeMobileMenu} className='navbar__options_option'>
+              <div className={`${`/${lng}/about` === currentPath ? 'active-page-nav' : ''} navbar__options_option-text`}>ABOUT</div>
+              <div className={`${`/${lng}/about` === currentPath ? 'active-page-underline' : ''} underline`}></div>
+          </Link>
+          <Link href={`/${lng}/team`} onClick={closeMobileMenu} className='navbar__options_option'>
+              <div className={`${`/${lng}/team` === currentPath ? 'active-page-nav' : ''} navbar__options_option-text`}>TEAM</div>
+              <div className={`${`/${lng}/team` === currentPath ? 'active-page-underline' : ''} underline`}></div>
+          </Link>
         </div>
+
+        {/* Contact Button */}
+        <Link href={`/${lng}/contact`} className={`${`/${lng}/contact` === currentPath ? 'active-contact-page-btn' : ''} navbar__contact`}>
+          <div className={`${`/${lng}/contact` === currentPath ? 'active-contact-page-text' : ''} navbar__contact_text`}>CONTACT</div>
+        </Link>
 
         <div className="navbar__expand-btn" onClick={toggleMobileMenu}>
           <div className="navbar__expand-btn_iconbox">
             <div className="navbar__expand-btn_iconbox-bar navbar__expand-btn_iconbox-bar--1"></div>
             <div className="navbar__expand-btn_iconbox-bar navbar__expand-btn_iconbox-bar--2"></div>
-            <div className="navbar__expand-btn_iconbox-bar navbar__expand-btn_iconbox-bar--1"></div>
+            <div className="navbar__expand-btn_iconbox-bar navbar__expand-btn_iconbox-bar--3"></div>
           </div>
         </div>
 
