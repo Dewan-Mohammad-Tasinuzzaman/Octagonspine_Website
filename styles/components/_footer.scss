@@ -1,29 +1,48 @@
 
 
 .footer {
-
+    
+    overflow: hidden;
     position: relative;
     width: 100vw;
 
     &__content {
 
         background-color: var(--color-white);
-        padding: 10rem 20rem 10rem 20rem;
+        padding: 10rem 10rem;
 
         display: flex;
         align-items: center;
         justify-content: space-between;
 
+        @include respond(laptop-small-2) {
+            flex-direction: column;
+            gap: 8rem;
+            padding-bottom: 5rem;
+        }
+
         &_logo {
             width: 30rem;
             height: auto;
+
+            @include respond(laptop-large) {
+                width: 20rem;
+            }
+            @include respond(laptop-small-2) {
+                width: 30rem;
+            }
         }
 
         &_copyright {
             
             font-size: 2.2rem;
+            text-align: right;
             font-weight: 500;
             color: var(--color-tertiary);
+
+            @include respond(laptop-small-2) {
+                text-align: center;
+            }
 
             &-link {
                 color: var(--color-primary);
@@ -41,7 +60,7 @@
 
 .footer__separator {
 
-    position: relative;
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100vw;

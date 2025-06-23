@@ -9,7 +9,8 @@
 .hero {
     position: relative;
     width: 100vw;
-    height: 86vh;
+    height: 98vh;
+    overflow: hidden;
 
     display: flex;
     align-items: center;
@@ -17,10 +18,19 @@
 
     &__illustration {
         
-        margin-top: 4rem;
         position: relative;
         width: 24rem;
         height: 24rem;
+        opacity: 0;
+
+        animation: FadeIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+        animation-delay: 1.5s;
+
+        @include respond(phone) {
+            width: 18rem;
+            height: 18rem;
+            margin-bottom: 30rem
+        }
         
         &_stroke {
             @include absolute-center;
@@ -43,7 +53,6 @@
 
     &__infinite-text {
         
-        margin-top: 2rem;
         position: absolute;
         top: 50%;
         left: 0;
@@ -51,16 +60,21 @@
         font-weight: 400;
         letter-spacing: 1px;
         color: white;
+        opacity: 0;
         text-transform: uppercase;
         display: flex;
         align-items: center;
         gap: 4rem;
         width: auto;
         white-space: nowrap;
-        animation: InfiniteMoveX 10s linear infinite forwards;
+        
+        overflow: hidden;
+        animation: FadeIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards, InfiniteMoveX 10s linear infinite forwards;
+        animation-delay: 0.5s;
+        
 
         &_item {
-            font-size: 2.8rem;
+            font-size: 3rem;
         }
         &_dot {
             width: 1rem;
@@ -75,6 +89,14 @@
         top: 75%;
         left: 50%;
         transform: translate(-50%, -50%);
+        opacity: 0;
+
+        animation: FadeIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+        animation-delay: 2.5s;
+
+        @include respond(phone) {
+            top: 60%;
+        }
     }
 
     &__spine-illustration-left {
@@ -82,27 +104,39 @@
         z-index: -5;
         mix-blend-mode: lighten;
         opacity: 0.2;
-        bottom: -25%;
+        bottom: -20%;
         left: -10%;
         width: 85rem;
         height: auto;
         transform: rotate(-10deg) scaleX(-1) translateY(0rem);
+        overflow: visible;
         animation: 
             Float_Up_Down_Hero_01 8s ease-in-out infinite alternate-reverse,
-            OpacityPulseAnimation_02 6s ease-in-out infinite alternate-reverse;
+            OpacityPulseAnimation_02 4s ease-in-out infinite alternate-reverse;
+
+        @include respond(laptop-large) {
+            width: 60rem;
+            bottom: -10%;
+        }
     }
     &__spine-illustration-right {
         position: absolute;
         z-index: -5;
         mix-blend-mode: lighten;
         opacity: 0.35;
-        bottom: -25%;
+        bottom: -20%;
         right: -10%;
         width: 85rem;
         height: auto;
         transform: rotate(10deg) translateY(0rem);
+        overflow: visible;
         animation: 
             Float_Up_Down_Hero_02 8s ease-in-out infinite alternate-reverse,
-            OpacityPulseAnimation_02 6s ease-in-out infinite alternate-reverse;
+            OpacityPulseAnimation_02 4s ease-in-out infinite alternate-reverse;
+
+        @include respond(laptop-large) {
+            width: 60rem;
+            bottom: -10%;
+        }
     }
 }

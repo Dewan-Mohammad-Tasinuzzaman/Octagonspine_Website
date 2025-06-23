@@ -28,6 +28,10 @@
 }
 .page-span-big {
     width: 85vw;
+
+    @include respond(tablet-small-1) {
+        width: 95vw;
+    }
 }
 .page-margins-big {
     margin: 0 15rem;
@@ -52,10 +56,10 @@
 
     }
     @include respond(tablet-small-1) {
-
+        margin: 0 5rem;
     }
     @include respond(phone) {
-
+        
     }
     @include respond(phone-small-1) {
 

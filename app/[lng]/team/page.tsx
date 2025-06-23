@@ -85,12 +85,6 @@ const Team = () => {
 
       </main>
 
-      {/* FOOTER-SEPARATOR */}
-      <div className="footer__separator">
-        <Image src={Rounded_Edge_Left} alt="" unoptimized={true} className="footer__separator_edge footer__separator_edge-left" />
-        <Image src={Rounded_Edge_Right} alt="" unoptimized={true} className="footer__separator_edge footer__separator_edge-right" />
-      </div>
-
     </>
   )
 }

@@ -64,14 +64,15 @@ export default function Home({ params: { lng } }: HomePageProps) {
         {/* Skeleton Illustration */}
         <Image src={Spine_Illustration} alt="Spine Illustration" unoptimized={true} className="hero__spine-illustration-left" />
         <Image src={Spine_Illustration} alt="Spine Illustration" unoptimized={true} className="hero__spine-illustration-right" />
+
+
+        {/* FOOTER-SEPARATOR */}
+        <div className="footer__separator">
+          <Image src={Rounded_Edge_Left} alt="" unoptimized={true} className="footer__separator_edge footer__separator_edge-left" />
+          <Image src={Rounded_Edge_Right} alt="" unoptimized={true} className="footer__separator_edge footer__separator_edge-right" />
+        </div>
         
       </section>
-
-      {/* FOOTER-SEPARATOR */}
-      <div className="footer__separator">
-        <Image src={Rounded_Edge_Left} alt="" unoptimized={true} className="footer__separator_edge footer__separator_edge-left" />
-        <Image src={Rounded_Edge_Right} alt="" unoptimized={true} className="footer__separator_edge footer__separator_edge-right" />
-      </div>
 
     </main>
   );

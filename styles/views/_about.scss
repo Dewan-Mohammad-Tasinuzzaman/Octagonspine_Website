@@ -4,6 +4,8 @@
 
 .about {
     padding-top: 20rem;
+    padding-bottom: 20rem;
+    overflow: hidden;
 
     &__section01 {
 
@@ -11,6 +13,11 @@
         align-items: center;
         justify-content: space-between;
         gap: 5rem;
+
+        @include respond(laptop-small-2) {
+            flex-direction: column-reverse;
+            gap: 8rem;
+        }
 
 
         &_content {
@@ -45,11 +52,28 @@
                 mix-blend-mode: lighten;
                 opacity: 0.8;
                 animation: OpacityPulseAnimation_03 5s ease-in-out infinite alternate-reverse;
+
+                @include respond(laptop-large) {
+                    height: 60rem;
+                }
+                @include respond(laptop) {
+                    height: 50rem;
+                }
+                @include respond(laptop-small-2) {
+
+                }
             }
             &-logo {
                 @include absolute-center;
                 width: 30rem;
                 height: auto;
+
+                @include respond(laptop-large) {
+                    width: 25rem;
+                }
+                @include respond(laptop) {
+                    width: 20rem;
+                }
             }
         }
     }
@@ -60,13 +84,26 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        // gap: 1rem;
+        
+        @include respond(laptop-small-2) {
+            margin-top: 10rem;
+        }
 
         &_text01 {
             text-align: right;
             margin-left: auto;
             margin-bottom: 10rem;
             width: 50%;
+
+            @include respond(laptop-small-2) {
+                width: 90%;
+            }
+            @include respond(tablet-small-1) {
+        
+            }
+            @include respond(phone) {
+                width: 95%;
+            }
         }
 
         &_heading01 {
@@ -75,26 +112,47 @@
             margin-right: auto;
             margin-bottom: 2rem;
             width: 50%;
+
+            @include respond(laptop-small-2) {
+                width: 70%;
+            }
         }
         &_text02 {
             margin-right: auto;
             width: 50%;
+            white-space: nowrap;
+
+            @include respond(laptop-small-2) {
+                width: 70%;
+            }
+            @include respond(tablet-small-1) {
+                white-space: initial;
+                width: 100%;
+            }
         }
     }
 
     &__section03 {
 
         margin-top: 20rem;
-        margin-bottom: 10rem;
         display: flex;
         align-items: center;
         gap: 5rem;
 
+        @include respond(laptop-small-2) {
+            flex-direction: column;
+            gap: 8rem;
+        }
+
         &_videobox {
-            width: 50%;
+            width: 100rem;
             height: auto;
             overflow: hidden;
             border-radius: 20px;
+
+            @include respond(laptop-small-2) {
+                width: 100rem;width: 100%;
+            }
 
             &-video-source {
                 position: absolute;
@@ -104,6 +162,13 @@
             }
         }
         &_heading {
+
+            margin-left: auto;
+
+            @include respond(laptop-small-2) {
+                text-align: center;
+                margin-left: 0;
+            }
 
             &-text {
 

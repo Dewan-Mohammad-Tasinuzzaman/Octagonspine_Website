@@ -36,7 +36,7 @@ export default function Contact({ params: { lng } }: ContactProps) {
           <Image src={Hero_Octagon_Icon} alt="Logo Symbol" unoptimized={true} className="contact__content_logo" />
 
           <div className="contact__content_heading heading">
-            <h1 className="contact__content_heading-text heading-text">TEAM</h1>
+            <h1 className="contact__content_heading-text heading-text">Contact</h1>
             <div className="contact__content_heading-underline heading-underline"></div>
           </div>
 
@@ -65,12 +65,6 @@ export default function Contact({ params: { lng } }: ContactProps) {
         </div>
 
       </main>
-
-      {/* FOOTER-SEPARATOR */}
-      <div className="footer__separator">
-        <Image src={Rounded_Edge_Left} alt="" unoptimized={true} className="footer__separator_edge footer__separator_edge-left" />
-        <Image src={Rounded_Edge_Right} alt="" unoptimized={true} className="footer__separator_edge footer__separator_edge-right" />
-      </div>
     </>
   )
 }

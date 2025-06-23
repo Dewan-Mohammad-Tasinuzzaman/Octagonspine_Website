@@ -63,6 +63,11 @@
         grid-template-rows: repeat(2, auto);
         row-gap: 6rem;
         column-gap: 2rem;
+
+        @include respond(laptop-small-2) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+        }
     }
     &__members-member {
 

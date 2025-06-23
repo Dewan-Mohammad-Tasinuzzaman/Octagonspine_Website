@@ -77,7 +77,7 @@ export default function NavBar({ params: { lng } }: NavBarProps) {
         </Link>
 
         {/* Interaction Layer for closing Mobile-Menu */}
-        {/* <div className={`navbar__interaction-overlay ${showMobileMenu ? '' : 'display-none'}`} onClick={closeMobileMenu}></div> */}
+        <div className={`navbar__interaction-overlay ${showMobileMenu ? '' : 'display-none'}`} onClick={closeMobileMenu}></div>
 
         {/* Main Options */}
         <div className={`navbar__options ${showMobileMenu ? 'show-mobile-menu' : ''}`}>

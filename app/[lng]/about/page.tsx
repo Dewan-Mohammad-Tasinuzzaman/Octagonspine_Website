@@ -87,15 +87,10 @@ const About = () => {
             <div className="about__section03_heading-underline heading-underline"></div>
             <p className="about__section03_heading-description">WATCH THIS ANIMATION TO GAIN A GOOD UNDERSTANDING OF HOW IT WORKS.</p>
           </div>
+
         </section>
 
       </main>
-
-      {/* FOOTER-SEPARATOR */}
-      <div className="footer__separator">
-        <Image src={Rounded_Edge_Left} alt="" unoptimized={true} className="footer__separator_edge footer__separator_edge-left" />
-        <Image src={Rounded_Edge_Right} alt="" unoptimized={true} className="footer__separator_edge footer__separator_edge-right" />
-      </div>
     </>
   )
 }
