@@ -72,6 +72,10 @@
         width: 10rem;
         height: auto;
 
+        @include respond(phone) {
+            width: 5rem;
+        }
+
         &-left {
 
         }
