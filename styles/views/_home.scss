@@ -3,42 +3,51 @@
 @import '../variables';
 @import '../mixins';
 @import '../utils';
+@import '../animations';
 
 
 .hero {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 86vh;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     &__illustration {
-
+        
+        margin-top: 4rem;
         position: relative;
         width: 24rem;
         height: 24rem;
-
-        &_symbol {
-            @include absolute-center;
-            height: 115%;
-            width: auto;
-        }
+        
         &_stroke {
             @include absolute-center;
             height: 100%;
+            width: auto;
+            animation: KeepRotatingAnimationRandomly_01 8s cubic-bezier(0.33, 1, 0.68, 1) infinite forwards;
+        }
+        &_fill {
+            @include absolute-center;
+            height: 85%;
+            width: auto;
+            animation: KeepRotatingAnimationRandomly_02 8s cubic-bezier(0.33, 1, 0.68, 1) infinite reverse;
+        }
+        &_symbol {
+            @include absolute-center;
+            height: 50%;
             width: auto;
         }
     }
 
     &__infinite-text {
         
+        margin-top: 2rem;
         position: absolute;
         top: 50%;
         left: 0;
         transform: translateX(0) translateY(-50%);
-        font-size: 3.6rem;
         font-weight: 400;
         letter-spacing: 1px;
         color: white;
@@ -51,7 +60,7 @@
         animation: InfiniteMoveX 10s linear infinite forwards;
 
         &_item {
-
+            font-size: 2.8rem;
         }
         &_dot {
             width: 1rem;
@@ -73,21 +82,27 @@
         z-index: -5;
         mix-blend-mode: lighten;
         opacity: 0.2;
-        bottom: -10%;
+        bottom: -25%;
         left: -10%;
         width: 85rem;
         height: auto;
-        transform: rotate(-10deg) scaleX(-1);
+        transform: rotate(-10deg) scaleX(-1) translateY(0rem);
+        animation: 
+            Float_Up_Down_Hero_01 8s ease-in-out infinite alternate-reverse,
+            OpacityPulseAnimation_02 6s ease-in-out infinite alternate-reverse;
     }
     &__spine-illustration-right {
         position: absolute;
         z-index: -5;
         mix-blend-mode: lighten;
         opacity: 0.35;
-        bottom: -10%;
+        bottom: -25%;
         right: -10%;
         width: 85rem;
         height: auto;
-        transform: rotate(10deg);
+        transform: rotate(10deg) translateY(0rem);
+        animation: 
+            Float_Up_Down_Hero_02 8s ease-in-out infinite alternate-reverse,
+            OpacityPulseAnimation_02 6s ease-in-out infinite alternate-reverse;
     }
 }

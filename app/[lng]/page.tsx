@@ -6,10 +6,13 @@ import Link from "next/link";
 import styles from "./page.module.scss";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { useTranslation } from '../i18n/client';
-import External_Link_Icon from "@/public/assets/svgs/external-link_icon.svg";
 import Hero_Octagon_Symbol from "@/public/assets/svgs/hero-octagon-symbol.svg";
-import Hero_Octagon_Stroke from "@/public/assets/svgs/hero-octagon.svg";
+import Hero_Octagon_Stroke from "@/public/assets/svgs/hero-octagon-stroke.svg";
+import Hero_Octagon_Fill from "@/public/assets/svgs/hero-octagon-fill.svg";
+import Logo_Symbol_White from '@/public/assets/svgs/logo-symbol-white.svg';
 import Spine_Illustration from "@/public/assets/images/spine_geometric_illustration-orange.png";
+import Rounded_Edge_Left from '@/public/assets/svgs/rounded-edge-illustration-left.svg';
+import Rounded_Edge_Right from '@/public/assets/svgs/rounded-edge-illustration-right.svg';
 
 
 // Define the props type for the HomePage component
@@ -48,8 +51,9 @@ export default function Home({ params: { lng } }: HomePageProps) {
         </div>
         
         <div className="hero__illustration">
-          <Image src={Hero_Octagon_Symbol} alt="Octagon Symbol" unoptimized={true} className="hero__illustration_symbol" />
           <Image src={Hero_Octagon_Stroke} alt="Octagon Stroke" unoptimized={true} className="hero__illustration_stroke" />
+          <Image src={Hero_Octagon_Fill} alt="Octagon Fill" unoptimized={true} className="hero__illustration_fill" />
+          <Image src={Logo_Symbol_White} alt="Octagon Symbol" unoptimized={true} className="hero__illustration_symbol" />
         </div>
 
         {/* Learn More Button */}
@@ -62,6 +66,12 @@ export default function Home({ params: { lng } }: HomePageProps) {
         <Image src={Spine_Illustration} alt="Spine Illustration" unoptimized={true} className="hero__spine-illustration-right" />
         
       </section>
+
+      {/* FOOTER-SEPARATOR */}
+      <div className="footer__separator">
+        <Image src={Rounded_Edge_Left} alt="" unoptimized={true} className="footer__separator_edge footer__separator_edge-left" />
+        <Image src={Rounded_Edge_Right} alt="" unoptimized={true} className="footer__separator_edge footer__separator_edge-right" />
+      </div>
 
     </main>
   );

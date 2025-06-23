@@ -1,3 +1,81 @@
 @import '../variables';
 @import '../mixins';
 @import '../utils';
+
+
+.contact {
+
+    padding-top: 20rem;
+
+    &__content {
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        &_logo {
+            width: 25rem;
+            height: auto;
+        }
+
+        &_heading {
+
+            text-align: center;
+
+            &-text {
+
+            }
+            &-underline {
+
+            }
+        }
+
+        &_info {
+
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+
+            &-name {
+
+            }
+
+            &-item {
+
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+
+                &--icon {
+                    height: 4rem;
+                    width: auto;
+                }
+                &--text {
+
+                }
+            }
+        }
+
+        &_button {
+            margin-top: 5rem;
+        }
+
+        &_text01 {
+            margin-top: 5rem;
+        }
+
+        &_qr {
+            margin-top: 5rem;
+            width: 30rem;
+            height: auto;
+        }
+
+        &_text02 {
+            
+        }
+    }
+}

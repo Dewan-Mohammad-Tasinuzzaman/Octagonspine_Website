@@ -2,4 +2,62 @@
 
 .footer {
 
+    position: relative;
+    width: 100vw;
+
+    &__content {
+
+        background-color: var(--color-white);
+        padding: 10rem 20rem 10rem 20rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &_logo {
+            width: 30rem;
+            height: auto;
+        }
+
+        &_copyright {
+            
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: var(--color-tertiary);
+
+            &-link {
+                color: var(--color-primary);
+                font-weight: 900;
+                transition: all .3s ease-out;
+
+                &:hover {
+                    color: var(--color-secondary);
+                }
+            }
+        }
+    }
+}
+
+
+.footer__separator {
+
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+
+    display: flex;
+    justify-content: space-between;
+
+    &_edge {
+        width: 10rem;
+        height: auto;
+
+        &-left {
+
+        }
+        &-right {
+
+        }
+    }
 }

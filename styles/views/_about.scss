@@ -1,3 +1,119 @@
 @import '../variables';
 @import '../mixins';
 @import '../utils';
+
+.about {
+    padding-top: 20rem;
+
+    &__section01 {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5rem;
+
+
+        &_content {
+
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+
+            &-heading {
+                &--text {
+
+                }
+                &--underline {
+                    
+                }
+            }
+            &-text {
+
+            }
+            &-banner {
+                border-radius: 2rem;
+            }
+        }
+
+        &_illustration {
+
+            position: relative;
+
+            &-skeleton {
+                height: 70rem;
+                width: auto;
+                mix-blend-mode: lighten;
+                opacity: 0.8;
+                animation: OpacityPulseAnimation_03 5s ease-in-out infinite alternate-reverse;
+            }
+            &-logo {
+                @include absolute-center;
+                width: 30rem;
+                height: auto;
+            }
+        }
+    }
+
+    &__section02 {
+
+        margin-top: 20rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        // gap: 1rem;
+
+        &_text01 {
+            text-align: right;
+            margin-left: auto;
+            margin-bottom: 10rem;
+            width: 50%;
+        }
+
+        &_heading01 {
+            font-size: 3.6rem;
+            text-align: left;
+            margin-right: auto;
+            margin-bottom: 2rem;
+            width: 50%;
+        }
+        &_text02 {
+            margin-right: auto;
+            width: 50%;
+        }
+    }
+
+    &__section03 {
+
+        margin-top: 20rem;
+        margin-bottom: 10rem;
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+
+        &_videobox {
+            width: 50%;
+            height: auto;
+            overflow: hidden;
+            border-radius: 20px;
+
+            &-video-source {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &_heading {
+
+            &-text {
+
+            }
+            &-underline {
+
+            }
+            &-description {
+                margin-top: 2rem;
+            }
+        }
+    }
+}

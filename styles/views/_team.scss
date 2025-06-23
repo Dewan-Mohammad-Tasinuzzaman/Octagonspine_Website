@@ -1,3 +1,99 @@
 @import '../variables';
 @import '../mixins';
 @import '../utils';
+
+
+
+.team {
+
+    padding-top: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &__skeleton {
+        position: fixed;
+        z-index: -5;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 80rem;
+        width: auto;
+        opacity: 0.1;
+        animation: OpacityPulseAnimation_04 5s ease-in-out infinite alternate-reverse;;
+    }
+
+    &__person-ceo {
+
+    }
+
+    &__white-line {
+        margin-top: 4rem;
+    }
+
+    &__founder-text {
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    &__heading {
+
+        margin-top: 20rem;
+        text-align: center;
+
+        &-text {
+
+        }
+        &-underline {
+
+        }
+    }
+
+    &__members-text {
+        margin-top: 4rem;
+        text-align: center;
+    }
+
+    &__members-container {
+
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        row-gap: 6rem;
+        column-gap: 2rem;
+    }
+    &__members-member {
+
+    }
+}
+
+// Person
+.person {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    &__img {
+        width: 20rem;
+        height: auto;
+    }
+
+    &__info {
+
+        text-align: center;
+
+        &_name {
+
+        }
+        &_title {
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 1;
+        }
+    }
+}

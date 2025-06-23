@@ -8,8 +8,17 @@
 .overflow-hidden {
     overflow: hidden;
 }
-.display-none {
-    display: none;
+.display-flex {
+    display: flex;
+}
+.flex-dir-col {
+    flex-direction: column;
+}
+.align-center {
+    align-items: center;
+}
+.justify-center {
+    justify-content: center;
 }
 .pos-relative {
     position: relative;
@@ -21,7 +30,7 @@
     width: 85vw;
 }
 .page-margins-big {
-    margin: 0 20rem;
+    margin: 0 15rem;
 
     @include respond(laptop) {
 
@@ -37,7 +46,7 @@
     }
 }
 .page-margins-small {
-    margin: 0 16rem;
+    margin: 0 10rem;
 
     @include respond(laptop) {
 
@@ -64,4 +73,12 @@
 }
 .aspect-2-1 {
     aspect-ratio: 2/1;
+}
+
+
+.white-line {
+    position: relative;
+    width: 10rem;
+    height: 1px;
+    background-color: var(--color-white);
 }
