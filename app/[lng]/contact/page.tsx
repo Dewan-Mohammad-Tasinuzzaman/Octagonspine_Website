@@ -10,7 +10,7 @@ import { ParallaxBanner } from "react-scroll-parallax";
 import Rounded_Edge_Left from '@/public/assets/svgs/rounded-edge-illustration-left.svg';
 import Rounded_Edge_Right from '@/public/assets/svgs/rounded-edge-illustration-right.svg';
 import Spine_Illustration from "@/public/assets/images/spine_geometric_illustration-orange.png";
-import Hero_Octagon_Icon from "@/public/assets/svgs/hero_icon.svg";
+import About_Octagon_Icon from "@/public/assets/svgs/about_icon.svg";
 import Email_Icon from "@/public/assets/svgs/email-icon.svg";
 import Phone_Icon from "@/public/assets/svgs/phone-icon.svg";
 import QR_Code from "@/public/assets/images/meeting-qr-code.png";
@@ -33,7 +33,7 @@ export default function Contact({ params: { lng } }: ContactProps) {
 
         <div className="contact__content">
 
-          <Image src={Hero_Octagon_Icon} alt="Logo Symbol" unoptimized={true} className="contact__content_logo" />
+          <Image src={About_Octagon_Icon} alt="Logo Symbol" unoptimized={true} className="contact__content_logo" />
 
           <div className="contact__content_heading heading">
             <h1 className="contact__content_heading-text heading-text">Contact</h1>
@@ -52,7 +52,7 @@ export default function Contact({ params: { lng } }: ContactProps) {
             </div>
           </div>
 
-          <Link href={`/${lng}/about`} className={`btn-primary contact__content_button`}>
+          <Link href={`https://form.typeform.com/to/vsam4vLn`} target="blank" className={`btn-primary contact__content_button`}>
             <div className={`btn-primary__text`}>SET UP A MEETING</div>
           </Link>
 

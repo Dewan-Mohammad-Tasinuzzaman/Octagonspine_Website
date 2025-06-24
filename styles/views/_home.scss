@@ -42,6 +42,7 @@
             @include absolute-center;
             height: 85%;
             width: auto;
+            opacity: 0.9;
             animation: KeepRotatingAnimationRandomly_02 8s cubic-bezier(0.33, 1, 0.68, 1) infinite reverse;
         }
         &_symbol {
@@ -74,7 +75,7 @@
         
 
         &_item {
-            font-size: 3rem;
+            font-size: 3.2rem;
         }
         &_dot {
             width: 1rem;

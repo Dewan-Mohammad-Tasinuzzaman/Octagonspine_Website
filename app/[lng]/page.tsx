@@ -10,6 +10,7 @@ import Hero_Octagon_Symbol from "@/public/assets/svgs/hero-octagon-symbol.svg";
 import Hero_Octagon_Stroke from "@/public/assets/svgs/hero-octagon-stroke.svg";
 import Hero_Octagon_Fill from "@/public/assets/svgs/hero-octagon-fill.svg";
 import Logo_Symbol_White from '@/public/assets/svgs/logo-symbol-white.svg';
+import Logo_Symbol from '@/public/assets/svgs/logo-symbol.svg';
 import Spine_Illustration from "@/public/assets/images/spine_geometric_illustration-orange.png";
 import Rounded_Edge_Left from '@/public/assets/svgs/rounded-edge-illustration-left.svg';
 import Rounded_Edge_Right from '@/public/assets/svgs/rounded-edge-illustration-right.svg';
@@ -30,10 +31,6 @@ export default function Home({ params: { lng } }: HomePageProps) {
   // Images for ParallaxBanner
   const homeBannerImage = "/assets/images/image.PNG";
 
-  // Videos
-  const BlueSmoke_MP4_URL = "/assets/videos/video.mp4";
-  const BlueSmoke_WEBM_URL = "/assets/videos/video.webm";
-
   return (
     <main className={styles.main}>
       
@@ -42,18 +39,18 @@ export default function Home({ params: { lng } }: HomePageProps) {
         {/* Infiinite Text */}
         <div className="hero__infinite-text">
         <div className="hero__infinite-text_item hero__infinite-text_dot"></div>
-          <p className="hero__infinite-text_item"><span className="bold">THE WORLD&apos;S 1<sup>ST</sup></span> 3D PRINTABLE TITANIUM EXPANDABLE <span className="bold">SPINAL CAGE</span> FOR PRECISION MEDICINE</p>
+          <p className="hero__infinite-text_item"><span className="bold">THE WORLD&apos;S 1<sup>ST</sup></span> 3D PRINTED TITANIUM EXPANDABLE <span className="bold">SPINAL CAGE</span> FOR PRECISION MEDICINE</p>
           <div className="hero__infinite-text_item hero__infinite-text_dot"></div>
-          <p className="hero__infinite-text_item"><span className="bold">THE WORLD&apos;S 1<sup>ST</sup></span> 3D PRINTABLE TITANIUM EXPANDABLE <span className="bold">SPINAL CAGE</span> FOR PRECISION MEDICINE</p>
+          <p className="hero__infinite-text_item"><span className="bold">THE WORLD&apos;S 1<sup>ST</sup></span> 3D PRINTED TITANIUM EXPANDABLE <span className="bold">SPINAL CAGE</span> FOR PRECISION MEDICINE</p>
           <div className="hero__infinite-text_item hero__infinite-text_dot"></div>
-          <p className="hero__infinite-text_item"><span className="bold">THE WORLD&apos;S 1<sup>ST</sup></span> 3D PRINTABLE TITANIUM EXPANDABLE <span className="bold">SPINAL CAGE</span> FOR PRECISION MEDICINE</p>
+          <p className="hero__infinite-text_item"><span className="bold">THE WORLD&apos;S 1<sup>ST</sup></span> 3D PRINTED TITANIUM EXPANDABLE <span className="bold">SPINAL CAGE</span> FOR PRECISION MEDICINE</p>
           <div className="hero__infinite-text_item hero__infinite-text_dot"></div>
         </div>
         
         <div className="hero__illustration">
           <Image src={Hero_Octagon_Stroke} alt="Octagon Stroke" unoptimized={true} className="hero__illustration_stroke" />
           <Image src={Hero_Octagon_Fill} alt="Octagon Fill" unoptimized={true} className="hero__illustration_fill" />
-          <Image src={Logo_Symbol_White} alt="Octagon Symbol" unoptimized={true} className="hero__illustration_symbol" />
+          <Image src={Logo_Symbol} alt="Octagon Symbol" unoptimized={true} className="hero__illustration_symbol" />
         </div>
 
         {/* Learn More Button */}

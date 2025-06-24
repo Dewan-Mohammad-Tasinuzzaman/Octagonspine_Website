@@ -43,8 +43,6 @@ const Team = () => {
           <div className="team__heading-underline heading-underline"></div>
         </div>
 
-        <p className="team__members-text">A PROVEN SPINE INDUSTRY COO, TOP REGULATORY PARTNER WITH MCRA WITH FDA LEADERSHIP, A VETERAN DESIGN ENGINEERING FIRM, AND A BIOMECHANICS LAB SPECIALIZING IN FDA CLARANCE.</p>
-
         <div className="team__members-container">
           <div className="team__members-member person">
             <Image src={ERIC} alt="ERIC DASSO" unoptimized={true} className="person__img" />
@@ -54,31 +52,42 @@ const Team = () => {
             </div>
           </div>
           <div className="team__members-member person">
-            <Image src={MICHAEL} alt="MICHAEL COLADONATO" unoptimized={true} className="person__img" />
-            <div className="person__info">
-              <p className="person__info_name">MICHAEL COLADONATO</p>
-              <p className="person__info_title">Regulatory</p>
-            </div>
-          </div>
-          <div className="team__members-member person">
-            <Image src={JOHN} alt="JOHN SOUZA" unoptimized={true} className="person__img" />
-            <div className="person__info">
-              <p className="person__info_name">JOHN SOUZA</p>
-              <p className="person__info_title">Engineering</p>
-            </div>
-          </div>
-          <div className="team__members-member person">
             <Image src={YEFIM} alt="Yefim Safris" unoptimized={true} className="person__img" />
             <div className="person__info">
               <p className="person__info_name">Yefim Safris</p>
               <p className="person__info_title">Chief Engineer</p>
             </div>
           </div>
-          <div className="team__members-member person">
+        </div>
+
+        <div className="team__heading heading">
+          <h1 className="team__heading-text heading-text">Consultants</h1>
+          <div className="team__heading-underline heading-underline"></div>
+        </div>
+
+        <div className="team__consultants-container">
+          <div className="team__consultants-member person">
+            <Image src={MICHAEL} alt="MICHAEL COLADONATO" unoptimized={true} className="person__img" />
+            <div className="person__info">
+              <p className="person__info_name">MICHAEL COLADONATO</p>
+              <p className="person__info_title">Regulatory</p>
+              <p className="person__info_name">(MCRA)</p>
+            </div>
+          </div>
+          <div className="team__consultants-member person">
+            <Image src={JOHN} alt="JOHN SOUZA" unoptimized={true} className="person__img" />
+            <div className="person__info">
+              <p className="person__info_name">JOHN SOUZA</p>
+              <p className="person__info_title">Engineering</p>
+              <p className="person__info_name">(Wheelhouse Medical)</p>
+            </div>
+          </div>
+          <div className="team__consultants-member person">
             <Image src={BRODY} alt="BRODY NELSON" unoptimized={true} className="person__img" />
             <div className="person__info">
               <p className="person__info_name">BRODY NELSON</p>
               <p className="person__info_title">FDA Testing</p>
+              <p className="person__info_name">(Element Materials Tec)</p>
             </div>
           </div>
         </div>

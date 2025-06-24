@@ -7,6 +7,8 @@ import Image from 'next/image';
 import { useTranslation } from '../i18n/client';
 import { languages } from '../i18n/settings';
 import Logo_Symbol_White from '@/public/assets/svgs/logo-symbol-white.svg';
+import Logo_Symbol from '@/public/assets/svgs/logo-symbol.svg';
+import Octagon_Fill from "@/public/assets/svgs/hero-octagon-fill.svg";
 
 
 // Define the props type for the NavBar component
@@ -72,7 +74,8 @@ export default function NavBar({ params: { lng } }: NavBarProps) {
         {/* Logo Box */}
         <Link href={`/${lng}`} onClick={closeMobileMenu}>
           <div className="navbar__logobox">
-            <Image src={Logo_Symbol_White} alt="Logo" unoptimized={true} className="navbar__logobox_symbol" />
+            <Image src={Octagon_Fill} alt="" unoptimized={true} className="navbar__logobox_octagon" />
+            <Image src={Logo_Symbol} alt="Logo" unoptimized={true} className="navbar__logobox_symbol" />
           </div>
         </Link>
 

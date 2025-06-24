@@ -34,7 +34,7 @@ const About = () => {
             </div>
 
             <p className="about__section01_content-text">
-              At Octagon Spine, we are developing the solution: The first one-piece, 3D-printed expandable titanium cage—engineered for higher fusion success, simpler deployment, and mass customization.
+              Octagon Spine is developing the first one-piece, 3D-printed expandable titanium cage. Engineered for higher fusion success, simpler deployment, and mass customization.
             </p>
 
             <ParallaxBanner
@@ -61,11 +61,11 @@ const About = () => {
         </section>
 
         <section className="about__section02">
-          <p className="about__section02_text01"><span className="bolder">OctiMX<sup>TM</sup></span> is a 3D-printed, one-piece <span className="bolder">spinal cage</span> engineered with the <span className="bolder">largest bone graft window in its class.</span> Designed for biologic excellence and structural strength, it <span className="bolder">redefines</span> the standard in fusion-focused interbody devices.</p>
-          <h2 className="about__section02_heading01">OCTIMX<sup>TM</sup></h2>
+          <p className="about__section02_text01">Introducing OCTIMX<sup>TM</sup>, a 3D-printed, one-piece spinal cage engineered with the largest bone graft window in its class. Designed for biologic excellence and structural strength, it redefines the standard in fusion-focussed inter-body devices.</p>
+          {/* <h2 className="about__section02_heading01">OCTIMX<sup>TM</sup></h2>
           <p className="about__section02_text02">○  Engineered for Extremes. Built for Fusion</p>
           <p className="about__section02_text02">○  Precision-Printed. Biologically Driven</p>
-          <p className="about__section02_text02">○  The Future of Fusion Starts with MX</p>
+          <p className="about__section02_text02">○  The Future of Fusion Starts with MX</p> */}
         </section>
 
 
@@ -83,9 +83,8 @@ const About = () => {
             />
           </div>
           <div className="about__section03_heading heading">
-            <h1 className="about__section03_heading-text heading-text">ANIMATION</h1>
+            <h1 className="about__section03_heading-text heading-text">OCTIMX<sup>TM</sup> In Action</h1>
             <div className="about__section03_heading-underline heading-underline"></div>
-            <p className="about__section03_heading-description">WATCH THIS ANIMATION TO GAIN A GOOD UNDERSTANDING OF HOW IT WORKS.</p>
           </div>
 
         </section>
