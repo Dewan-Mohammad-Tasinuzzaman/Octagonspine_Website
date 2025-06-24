@@ -58,7 +58,9 @@ export default function Contact({ params: { lng } }: ContactProps) {
 
           <p className="contact__content_text01">OR</p>
 
-          <Image src={QR_Code} alt="QR Code" unoptimized={true} className="contact__content_qr" />
+          <Link href={`https://form.typeform.com/to/vsam4vLn`} target="blank" className={``}>
+            <Image src={QR_Code} alt="QR Code" unoptimized={true} className="contact__content_qr" />
+          </Link>
 
           <p className="contact__content_text02">SCAN THE QR CODE</p>
 
