@@ -61,7 +61,7 @@ const About = () => {
         </section>
 
         <section className="about__section02">
-          <p className="about__section02_text01">Introducing OCTIMX<sup>TM</sup>, a 3D-printed, one-piece spinal cage engineered with the largest bone graft window in its class. Designed for biologic excellence and structural strength, it redefines the standard in fusion-focussed inter-body devices.</p>
+          <p className="about__section02_text01">Introducing <span className="bold">OCTIMX<sup>TM</sup></span>, a 3D-printed, one-piece spinal cage engineered with the largest bone graft window in its class. Designed for biologic excellence and structural strength, it redefines the standard in fusion-focussed inter-body devices.</p>
           {/* <h2 className="about__section02_heading01">OCTIMX<sup>TM</sup></h2>
           <p className="about__section02_text02">○  Engineered for Extremes. Built for Fusion</p>
           <p className="about__section02_text02">○  Precision-Printed. Biologically Driven</p>

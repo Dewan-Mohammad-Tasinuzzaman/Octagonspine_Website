@@ -137,7 +137,10 @@
         margin-top: 12rem;
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 5rem;
+
+        flex-direction: column-reverse;
 
         @include respond(laptop-small-2) {
             flex-direction: column-reverse;
@@ -163,11 +166,11 @@
         }
         &_heading {
 
-            margin-right: auto;
+            text-align: center;
+
 
             @include respond(laptop-small-2) {
-                text-align: center;
-                margin-right: 0;
+
             }
 
             &-text {
@@ -177,7 +180,7 @@
 
             }
             &-description {
-                margin-top: 2rem;
+
             }
         }
     }
