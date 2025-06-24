@@ -19,8 +19,8 @@
     &__logobox {
 
         position: relative;
-        width: 8rem;
-        height: 8rem;
+        width: 6.5rem;
+        height: 6.5rem;
 
         &_octagon {
             @include absolute-center;
@@ -29,7 +29,7 @@
         }
         &_symbol {
             @include absolute-center;
-            width: 50%;
+            width: 60%;
             height: auto;
         }
     }
