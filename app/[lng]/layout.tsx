@@ -16,6 +16,7 @@ import { languages } from '../i18n/settings'
 const orbitron = Orbitron({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800', '900'], // Add weights as needed
+  variable: '--font-orbitron',
 });
 
 
@@ -47,8 +48,8 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
   const { lng } = params;
 
   return (
-    <html lang={lng} dir={dir(lng)} className={orbitron.className}>
-      <body>
+    <html lang={lng} dir={dir(lng)}>
+      <body className={orbitron.className}>
         <div className="layout__background-color"></div>
         <NavBar params={params} />
         <Providers>

@@ -26,10 +26,10 @@
         animation: FadeIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
         animation-delay: 1.5s;
 
-        @include respond(laptop-small-1) {
+        @include respond(laptop) {
             width: 16rem;
             height: 16rem;
-            margin-bottom: 28rem
+            margin-bottom: 27rem
         }
         @include respond(phone) {
             width: 14rem;
@@ -99,7 +99,7 @@
         animation: FadeIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
         animation-delay: 2.5s;
 
-        @include respond(laptop-small-1) {
+        @include respond(laptop) {
             top: 60%;
         }
     }
