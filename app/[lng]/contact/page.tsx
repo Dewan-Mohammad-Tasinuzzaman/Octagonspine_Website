@@ -52,8 +52,11 @@ export default function Contact({ params: { lng } }: ContactProps) {
             </div>
           </div>
 
-          <Link href={`https://form.typeform.com/to/vsam4vLn`} target="blank" className={`btn-primary contact__content_button`}>
-            <div className={`btn-primary__text`}>SET UP A MEETING</div>
+          <Link href="mailto:omarfj@octagonspine.com" target="_blank" rel="noopener noreferrer" className={`btn-primary contact__content_button01`}>
+            <div className={`btn-primary__text`}>MESSAGE</div>
+          </Link>
+          <Link href={`https://form.typeform.com/to/vsam4vLn`} target="blank" className={`btn-secondary contact__content_button02`}>
+            <div className={`btn-secondary__text`}>SET UP A MEETING</div>
           </Link>
 
           <p className="contact__content_text01">OR</p>
