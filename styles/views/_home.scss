@@ -29,7 +29,7 @@
         @include respond(laptop) {
             width: 16rem;
             height: 16rem;
-            margin-bottom: 27rem
+            margin-bottom: 18rem
         }
         @include respond(phone) {
             width: 14rem;
@@ -76,6 +76,10 @@
         overflow: hidden;
         animation: FadeIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards, InfiniteMoveX 10s linear infinite forwards;
         animation-delay: 0.5s;
+
+        @include respond(laptop) {
+            top: 55%;
+        }
         
 
         &_item {
@@ -100,7 +104,7 @@
         animation-delay: 2.5s;
 
         @include respond(laptop) {
-            top: 60%;
+            top: 65%;
         }
     }
 
