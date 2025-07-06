@@ -7,16 +7,29 @@
     padding-bottom: 20rem;
     overflow: hidden;
 
+    &__background_skeleton {
+        // display: none;
+        position: fixed;
+        z-index: -5;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 60rem;
+        width: auto;
+        opacity: 0.01;
+        animation: OpacityPulseAnimation_05 5s ease-in-out infinite alternate-reverse;
+    }
+
     &__section01 {
 
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        flex-direction: column-reverse;
         gap: 5rem;
 
         @include respond(laptop-small-2) {
-            flex-direction: column-reverse;
-            gap: 8rem;
+            gap: 5rem;
         }
 
 
@@ -26,6 +39,8 @@
             flex-direction: column;
             gap: 4rem;
 
+            text-align: center;
+
             &-heading {
                 &--text {
 
@@ -34,11 +49,23 @@
                     
                 }
             }
-            &-text {
+            &-text01 {
+
+            }
+            &-text02 {
 
             }
             &-banner {
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 5rem;
                 border-radius: 2rem;
+                width: 60% !important;
+                height: auto;
+
+                @include respond(laptop-small-2) {
+                    width: 90% !important;
+                }
             }
         }
 
@@ -47,11 +74,11 @@
             position: relative;
 
             &-skeleton {
-                height: 70rem;
+                height: 40rem;
                 width: auto;
                 mix-blend-mode: lighten;
                 opacity: 0.8;
-                animation: OpacityPulseAnimation_03 5s ease-in-out infinite alternate-reverse;
+                animation: OpacityPulseAnimation_03 2.5s ease-in-out infinite alternate-reverse;
 
                 @include respond(laptop-large) {
                     height: 60rem;
@@ -60,7 +87,7 @@
                     height: 50rem;
                 }
                 @include respond(laptop-small-2) {
-
+                    height: 40rem;
                 }
             }
             &-logo {
@@ -78,61 +105,8 @@
         }
     }
 
+
     &__section02 {
-
-        margin-top: 20rem;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        
-        @include respond(laptop-small-2) {
-            margin-top: 10rem;
-        }
-
-        &_text01 {
-            text-align: right;
-            margin-left: auto;
-            margin-bottom: 10rem;
-            width: 50%;
-
-            @include respond(laptop-small-2) {
-                width: 90%;
-            }
-            @include respond(tablet-small-1) {
-        
-            }
-            @include respond(phone) {
-                width: 95%;
-            }
-        }
-
-        &_heading01 {
-            font-size: 3.6rem;
-            text-align: left;
-            margin-right: auto;
-            margin-bottom: 2rem;
-            width: 50%;
-
-            @include respond(laptop-small-2) {
-                width: 70%;
-            }
-        }
-        &_text02 {
-            margin-right: auto;
-            width: 50%;
-            white-space: nowrap;
-
-            @include respond(laptop-small-2) {
-                width: 70%;
-            }
-            @include respond(tablet-small-1) {
-                white-space: initial;
-                width: 100%;
-            }
-        }
-    }
-
-    &__section03 {
 
         margin-top: 12rem;
         display: flex;
@@ -154,7 +128,7 @@
             border-radius: 20px;
 
             @include respond(laptop-small-2) {
-                width: 100rem;width: 100%;
+                width: 100%;
             }
 
             &-video-source {

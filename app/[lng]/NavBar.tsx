@@ -45,23 +45,23 @@ export default function NavBar({ params: { lng } }: NavBarProps) {
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const navBarRef = useRef(null);
 
+  const lastScrollTopRef = useRef(0);
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollTop = window.scrollY;
-      const isScrolledDown = currentScrollTop > lastScrollTop;
+      const isScrolledDown = currentScrollTop > lastScrollTopRef.current;
 
-      setLastScrollTop(currentScrollTop);
+      lastScrollTopRef.current = currentScrollTop;
 
-      // If scrolled down or at the top of the page, show the navbar
+      // Show navbar only if scrolling up or at the top
       setIsNavBarVisible(!isScrolledDown || currentScrollTop === 0);
     };
 
     window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [lastScrollTop]);
 
   const navbarClass = isNavBarVisible ? 'navbar' : 'navbar navbar-hidden';
 

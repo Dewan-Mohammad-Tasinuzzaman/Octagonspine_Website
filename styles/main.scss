@@ -100,6 +100,18 @@ a {
     text-decoration: none;
 }
 
+
+.background__skeleton {
+    position: fixed;
+    z-index: -5;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80rem;
+    width: auto;
+    opacity: 0.1;
+    animation: OpacityPulseAnimation_04 4s ease-in-out infinite alternate-reverse;
+}
 .layout__background-color {
     position: fixed;
     z-index: -10;
@@ -107,9 +119,12 @@ a {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: VAR(--color-primary);
-    background-color: VAR(--color-primary);
-    background: linear-gradient(300deg, #d33e15 30%, #ff6c42 100%);
+    // background: var(--color-primary);
+    // background-color: var(--color-primary);
+    // background: linear-gradient(300deg, #d33e15 30%, #ff6c42 100%);
+    background: var(--color-dark);
+    background-color: var(--color-dark);
+    // background: linear-gradient(300deg, #282828 30%, #333333 100%);
 }
 
 

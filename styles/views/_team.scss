@@ -10,18 +10,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    &__skeleton {
-        position: fixed;
-        z-index: -5;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 80rem;
-        width: auto;
-        opacity: 0.1;
-        animation: OpacityPulseAnimation_04 4s ease-in-out infinite alternate-reverse;;
-    }
 
     &__person-ceo {
 

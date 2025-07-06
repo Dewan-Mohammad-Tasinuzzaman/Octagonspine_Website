@@ -24,6 +24,9 @@ const About = () => {
 
       <main className="about page-margins-small">
 
+        {/* Spine Illustration */}
+        <Image src={Spine_Illustration} alt="Spine Illustration" unoptimized={true} className="background__skeleton about__background_skeleton" />
+
         <section className="about__section01">
 
           <div className="about__section01_content">
@@ -33,8 +36,11 @@ const About = () => {
               <div className="about__section01_content-heading--underline heading-underline"></div>
             </div>
 
-            <p className="about__section01_content-text">
-              Octagon Spine is developing the first one-piece, 3D-printed expandable titanium cage. Engineered for higher fusion success, simpler deployment, and mass customization.
+            <p className="about__section01_content-text01">
+              <span className="bold">Octagon</span> <span className="color-secondary bold">Spine</span> is developing the first one-piece, 3D-printed expandable titanium cage. Engineered for higher fusion success, simpler deployment, and mass customization.
+            </p>
+            <p className="about__section01_content-text02">
+              Introducing <span className="bold">OCTIMX<sup>TM</sup></span>, a 3D-printed, one-piece spinal cage engineered with the largest bone graft window in its class. Designed for biologic excellence and structural strength, it redefines the standard in fusion-focussed inter-body devices.
             </p>
 
             <ParallaxBanner
@@ -55,25 +61,17 @@ const About = () => {
           
           <div className="about__section01_illustration">
             <Image src={Spine_Illustration} alt="" unoptimized={true} className="about__section01_illustration-skeleton" />
-            <Image src={Hero_Octagon_Icon} alt="" unoptimized={true} className="about__section01_illustration-logo" />
+            {/* <Image src={Hero_Octagon_Icon} alt="" unoptimized={true} className="about__section01_illustration-logo" /> */}
           </div>
 
         </section>
 
+
         <section className="about__section02">
-          <p className="about__section02_text01">Introducing <span className="bold">OCTIMX<sup>TM</sup></span>, a 3D-printed, one-piece spinal cage engineered with the largest bone graft window in its class. Designed for biologic excellence and structural strength, it redefines the standard in fusion-focussed inter-body devices.</p>
-          {/* <h2 className="about__section02_heading01">OCTIMX<sup>TM</sup></h2>
-          <p className="about__section02_text02">○  Engineered for Extremes. Built for Fusion</p>
-          <p className="about__section02_text02">○  Precision-Printed. Biologically Driven</p>
-          <p className="about__section02_text02">○  The Future of Fusion Starts with MX</p> */}
-        </section>
-
-
-        <section className="about__section03">
-          <div className="about__section03_videobox">
+          <div className="about__section02_videobox">
             <ReactPlayer
               url={'/assets/videos/octagonspine-animation-video.mp4'}
-              className='about__section03_videobox-videobox_source'
+              className='about__section02_videobox-videobox_source'
               playing={isPlaying}
               width='100%'
               height='100%'
@@ -82,9 +80,9 @@ const About = () => {
               controls={true}
             />
           </div>
-          <div className="about__section03_heading heading">
-            <h1 className="about__section03_heading-text heading-text">OCTIMX<sup>TM</sup> In Action</h1>
-            <div className="about__section03_heading-underline heading-underline"></div>
+          <div className="about__section02_heading heading">
+            <h1 className="about__section02_heading-text heading-text">OCTIMX<sup>TM</sup> In Action</h1>
+            <div className="about__section02_heading-underline heading-underline"></div>
           </div>
 
         </section>

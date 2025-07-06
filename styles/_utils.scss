@@ -1,4 +1,11 @@
 @import './media-query-manager';
+@import './variables';
+
+
+// COLORS
+.color-secondary {
+    color: var(--color-secondary);
+}
 
 
 // BASIC USEFUL
@@ -40,7 +47,7 @@
 
     }
     @include respond(tablet-small-1) {
-
+        margin: 0 10rem;
     }
     @include respond(phone) {
 
@@ -59,7 +66,7 @@
         margin: 0 5rem;
     }
     @include respond(phone) {
-        
+        margin: 0 2rem;
     }
     @include respond(phone-small-1) {
 

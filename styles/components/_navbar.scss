@@ -4,14 +4,14 @@
 
     position: fixed;
     z-index: 100;
-    top: 5rem;
+    top: 8rem;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    opacity: 0;
+    transition: all .5s cubic-bezier(0.65, 0, 0.35, 1) !important;
 
     animation: FadeInNav 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
     animation-delay: 0.2s;
@@ -221,9 +221,9 @@
 }
 
 // Hide Full Navbar
-// .navbar-hidden {
-//     transform: translate(-50%, -150%) !important;
-//     @include respond(tablet-small-1) {
-//         transform: translate(-50%, 0) !important;
-//     }
-// }
+.navbar-hidden {
+    transform: translate(-50%, -250%) !important;
+    @include respond(tablet-small-1) {
+        transform: translate(-50%, -50%) !important;
+    }
+}

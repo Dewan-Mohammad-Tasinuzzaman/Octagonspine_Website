@@ -24,7 +24,7 @@ const Team = () => {
       <main className="team page-margins-small">
 
         {/* Spine Illustration */}
-        <Image src={Spine_Illustration} alt="Spine Illustration" unoptimized={true} className="team__skeleton" />
+        <Image src={Spine_Illustration} alt="Spine Illustration" unoptimized={true} className="background__skeleton" />
 
         <div className="team__person-ceo person">
           <Image src={OMAR} alt="OMAR JIMENEZ" unoptimized={true} className="person__img" />

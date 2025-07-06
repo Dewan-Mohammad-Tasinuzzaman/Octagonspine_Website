@@ -19,17 +19,21 @@
     &__illustration {
         
         position: relative;
-        width: 24rem;
-        height: 24rem;
+        width: 18rem;
+        height: 18rem;
         opacity: 0;
 
         animation: FadeIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
         animation-delay: 1.5s;
 
+        @include respond(laptop-small-1) {
+            width: 16rem;
+            height: 16rem;
+            margin-bottom: 28rem
+        }
         @include respond(phone) {
-            width: 18rem;
-            height: 18rem;
-            margin-bottom: 30rem
+            width: 14rem;
+            height: 14rem;
         }
         
         &_stroke {
@@ -95,7 +99,7 @@
         animation: FadeIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
         animation-delay: 2.5s;
 
-        @include respond(phone) {
+        @include respond(laptop-small-1) {
             top: 60%;
         }
     }
