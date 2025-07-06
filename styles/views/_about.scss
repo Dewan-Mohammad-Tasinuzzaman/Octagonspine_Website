@@ -74,20 +74,20 @@
             position: relative;
 
             &-skeleton {
-                height: 32rem;
+                height: 38rem;
                 width: auto;
                 mix-blend-mode: lighten;
                 opacity: 0.8;
                 animation: OpacityPulseAnimation_03 2.5s ease-in-out infinite alternate-reverse;
 
                 @include respond(laptop-large) {
-                    height: 60rem;
+                    height: 34rem;
                 }
                 @include respond(laptop) {
-                    height: 50rem;
+                    height: 32rem;
                 }
                 @include respond(laptop-small-2) {
-                    height: 40rem;
+                    height: 30rem;
                 }
             }
             &-logo {
