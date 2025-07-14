@@ -40,7 +40,7 @@ const About = () => {
               <span className="bold">Octagon</span> <span className="color-secondary bold">Spine</span> is developing the first one-piece, 3D-printed expandable titanium cage. Engineered for higher fusion success, simpler deployment, and mass customization.
             </p>
             <p className="about__section01_content-text02">
-              Introducing <span className="bold">OCTIMX<sup>TM</sup></span>, a 3D-printed, one-piece spinal cage engineered with the largest bone graft window in its class. Designed for biologic excellence and structural strength, it redefines the standard in fusion-focussed inter-body devices.
+              Introducing <span className="bold">OCTI<span className="color-secondary">MX</span><sup>TM</sup></span>, a 3D-printed, one-piece spinal cage engineered with the largest bone graft window in its class. Designed for biologic excellence and structural strength, it redefines the standard in fusion-focussed inter-body devices.
             </p>
 
             <ParallaxBanner
@@ -81,7 +81,7 @@ const About = () => {
             />
           </div>
           <div className="about__section02_heading heading">
-            <h1 className="about__section02_heading-text heading-text">OCTIMX<sup>TM</sup> In Action</h1>
+            <h1 className="about__section02_heading-text heading-text">OCTI<span className="color-secondary">MX</span><sup>TM</sup> In Action</h1>
             <div className="about__section02_heading-underline heading-underline"></div>
           </div>
 

@@ -45,12 +45,13 @@
             }
 
             &-link {
-                color: var(--color-primary);
+                color: var(--color-tertiary);
                 font-weight: 900;
                 transition: all .3s ease-out;
 
                 &:hover {
-                    color: var(--color-secondary);
+                    // color: var(--color-primary);
+                    text-decoration: underline;
                 }
             }
         }

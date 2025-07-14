@@ -87,7 +87,7 @@ const Team = () => {
             <div className="person__info">
               <p className="person__info_name">BRODY NELSON</p>
               <p className="person__info_title">FDA Testing</p>
-              <p className="person__info_name">(Element Materials Tec)</p>
+              <p className="person__info_company">(Element Materials Tec)</p>
             </div>
           </div>
         </div>

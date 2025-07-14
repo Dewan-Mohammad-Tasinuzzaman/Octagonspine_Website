@@ -144,3 +144,14 @@
     opacity: 1;
   }
 }
+
+
+
+@keyframes PersonTitleAnimation {
+  0%, 100% {
+    background-color: rgba(230, 79, 37, 1.0);
+  }
+  50% {
+    background-color: rgba(230, 79, 37, 0);
+  }
+}

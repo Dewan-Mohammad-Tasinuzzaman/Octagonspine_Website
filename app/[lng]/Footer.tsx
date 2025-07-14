@@ -30,7 +30,7 @@ export default function Footer({ params: { lng } }: FooterProps) {
     <footer id='footer' className="footer">
         <div className="footer__content">
             <Image src={Logo} alt="Octagon Spine Logo" unoptimized={true} className="footer__content_logo" />
-            <p className="footer__content_copyright">©{currentYear} <a href="" className="footer__content_copyright-link">OCTAGON SPINE</a>. ALL RIGHTS RESERVED</p>
+            <p className="footer__content_copyright">©{currentYear} <a href="" className="footer__content_copyright-link">OCTAGON <span className="color-primary">SPINE</span></a>.<br/>ALL RIGHTS RESERVED</p>
         </div>
     </footer>
     )

@@ -122,8 +122,8 @@ a {
     // background: var(--color-primary);
     // background-color: var(--color-primary);
     // background: linear-gradient(300deg, #d33e15 30%, #ff6c42 100%);
-    background: var(--color-dark);
-    background-color: var(--color-dark);
+    background: var(--color-darker);
+    background-color: var(--color-darker);
     // background: linear-gradient(300deg, #282828 30%, #333333 100%);
 }
 
@@ -143,12 +143,12 @@ a {
 
 //CUSTOM HIGHLIGHT
 ::selection {
-    background: rgba(222, 222, 222, 0.90);
-    color: #333333;
+    background: var(--color-primary);
+    color: #ffffff;
 }
 ::-moz-selection {
-    background: rgba(222, 222, 222, 0.90);
-    color: #333333;
+    background: var(--color-primary);
+    color: #ffffff;
 }
   
   
