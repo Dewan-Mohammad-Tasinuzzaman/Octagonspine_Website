@@ -36,7 +36,7 @@
 
     &__interaction-overlay {
         
-        @include respond(tablet-small-1) {
+        @include respond(tablet) {
             position: fixed;
             top: 0;
             left: 0;
@@ -50,11 +50,12 @@
         margin-left: 11.5rem;
         display: flex;
         align-items: center;
-        gap: 12rem;
+        gap: 8rem;
         color: var(--color-white);
         transition: all .6s cubic-bezier(0.65, 0, 0.35, 1);
 
-        @include respond(tablet-small-1) {
+        @include respond(tablet) {
+            width: 80vw;
             flex-direction: column;
             justify-content: center;
             gap: 4rem;
@@ -68,9 +69,6 @@
             width: 70vw;
             padding: 3rem;
 
-            @include respond(tablet-small-1) {
-                width: 80vw;
-            }
             @include respond(phone-small-1) {
                 width: 100vw;
             }
@@ -140,7 +138,7 @@
         overflow: hidden;
         // box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 
-        @include respond(tablet-small-1) {
+        @include respond(tablet) {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -223,7 +221,7 @@
 // Hide Full Navbar
 .navbar-hidden {
     transform: translate(-50%, -250%) !important;
-    @include respond(tablet-small-1) {
+    @include respond(tablet) {
         transform: translate(-50%, -50%) !important;
     }
 }

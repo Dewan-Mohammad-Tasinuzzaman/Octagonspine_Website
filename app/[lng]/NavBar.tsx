@@ -96,6 +96,10 @@ export default function NavBar({ params: { lng } }: NavBarProps) {
               <div className={`${`/${lng}/team` === currentPath ? 'active-page-nav' : ''} navbar__options_option-text`}>TEAM</div>
               <div className={`${`/${lng}/team` === currentPath ? 'active-page-underline' : ''} underline`}></div>
           </Link>
+          <Link href={`/${lng}/octagonai`} onClick={closeMobileMenu} className='navbar__options_option'>
+              <div className={`${`/${lng}/octagonai` === currentPath ? 'active-page-nav' : ''} navbar__options_option-text`}>Octagon AI</div>
+              <div className={`${`/${lng}/octagonai` === currentPath ? 'active-page-underline' : ''} underline`}></div>
+          </Link>
         </div>
 
         {/* Contact Button */}

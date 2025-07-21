@@ -1,0 +1,85 @@
+@import '../variables';
+@import '../mixins';
+@import '../utils';
+
+
+.octagonai {
+
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+    overflow: hidden;
+
+    &__background_skeleton {
+        // display: none;
+        position: fixed;
+        z-index: -5;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 60rem;
+        width: auto;
+        opacity: 0.01;
+        animation: OpacityPulseAnimation_05 5s ease-in-out infinite alternate-reverse;
+    }
+
+    &__section01 {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4rem;
+
+
+        &_illustration {
+            // display: none;
+            width: 50rem;
+            height: auto;
+            border-radius: 10px;
+            animation: FadeIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+            animation-delay: 0.5s;
+
+            @include respond(phone) {
+                width: 40rem;
+            }
+            @include respond(phone-small-2) {
+                width: 35rem;
+            }
+        }
+
+
+        &_content {
+
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+
+            text-align: center;
+
+
+            &-header {
+                font-size: 6rem;
+                line-height: 1;
+            }
+
+            &-heading {
+
+                opacity: 0;
+                animation: FadeIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+                animation-delay: 0.5s;
+
+                &--text {
+                    font-size: 2.8rem;
+                }
+                &--underline {
+                    
+                }
+            }
+            &-description {
+                opacity: 0;
+                animation: FadeIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+                animation-delay: 0.8s;
+            }
+        }
+    }
+}
